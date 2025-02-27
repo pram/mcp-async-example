@@ -28,7 +28,7 @@ public class McpClient {
 						System.out.println(tool.name())))
 				.subscribe();
 
-		asyncClient.callTool(new CallToolRequest("getHello", Map.of(
+		asyncClient.callTool(new CallToolRequest("calculateHello", Map.of(
 				"name", "Mr Client MCP"))).subscribe(x -> {
 					x.content().forEach(content -> {
 						System.out.println("Content: " + content);
